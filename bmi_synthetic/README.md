@@ -122,7 +122,7 @@ from utils import plot_2d_figure, plot_3d_figure
     )
 ```
 
-![data_2dim_2sym](figs\output.png)
+![data_2dim_2sym](fig1.png)
 
 
 ### Apply a transformation
@@ -163,7 +163,7 @@ plot_2d_figure(
     plot_cells=False                     
     )
 ```
-![data_2dim_2sym](figs\output2.png)
+![data_2dim_2sym](fig2.png)
 
 The `new_cell_bound` function is optional and is used to adjust the cells to the transformed data. However, its functionality is purely for visualization and can be disabled with the `plot_cells` variable.
 
@@ -205,7 +205,7 @@ plot_swissroll(
     savedata=False
     )
 ```
-![data_2dim_2sym](figs\output3.png)
+![data_2dim_2sym](fig3.png)
 
 To implement the `wiggly` and `spiral` transformations, you need to proceed differently. Unlike the previous transformations where the `sample` attribute is used to extract samples, for these two transformations you must use the `sample_split` attribute, which divides the dimensions of the synthetic data to use them as X and Y variables in the BMI code. To apply the corresponding divisions for each transformation, you need to input a `transformer` variable that takes the values "wiggly" and "spiral" as appropriate.
 
@@ -249,7 +249,7 @@ plot_spiral(
   savedata=False,
   )
 ```
-![data_2dim_2sym](figs\output4.png)
+![data_2dim_2sym](fig4.png)
 
 ### Indications
 
