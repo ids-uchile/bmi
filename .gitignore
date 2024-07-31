@@ -21,16 +21,10 @@
 *.yaml
 *.zip
 
-# Figures are also not allowed by default
-*.jpeg
-*.jpg
-*.pdf
-*.png
-*.svg
 
 # Notebooks are not allowed by default
 *.nb
-*.ipynb
+
 
 # Local scratch
 private/
