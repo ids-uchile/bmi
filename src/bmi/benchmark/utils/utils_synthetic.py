@@ -122,12 +122,12 @@ def plot_spiral(
     ax.set_xlabel(xlabel="Value of $X_1$")
     ax.set_ylabel(ylabel="Value of $X_2$")
     ax.set_title(f"{title} (Speed {speed})")
-
+    
     marker = "."
     # Plot the spiral data
     ax.scatter(
-        X[0][:, 0],
-        X[0][:, 1],
+        X[:, 0],
+        X[:, 1],
         marker=marker,
         s=1,
         c=y.ravel(),
