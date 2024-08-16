@@ -302,7 +302,7 @@ The selection of transformations was based on maintaining the mutual information
 
 >Let $X$, $X'$, $Y$, and $Y'$ be standard Borel spaces (e.g., smooth manifolds with their Borel σ-algebras) and $f : X → X'$ and $g: Y → Y'$ be continuous injective mappings. Then, for every $X$-valued r.v. $X$ and $Y$-valued r.v. $Y$ it holds that $I(X;Y) = I(f(X);g(Y))$. 
 
-La lista de transformaciones implementadas del paper son las siguientes:
+The list of implemented transformations from the paper are as follows:
 
 - **Half-cube map:** The transformation is used to lengthen the tails of distributions $X$ and $Y$. It applies the homeomorphism $h(x) = |x|^{3/2} \cdot \text{sign}(x)$, where \|x| is the absolute value of x and $\text{sign}(x)$ is the sign function that preserves the original sign of x. This transformation modifies the extreme values of the distribution, making the tails longer and more pronounced while maintaining symmetry around zero.
 
