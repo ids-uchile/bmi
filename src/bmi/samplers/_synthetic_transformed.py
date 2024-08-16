@@ -191,8 +191,14 @@ class TransformedSampler(base.BaseSampler):
             x_transformed1 = x[:, :spiral_dims[0]]
             x_transformed2 = x[:, spiral_dims[1]-1:]
             x_transformed = self.transform(x_transformed1, x_transformed2)
-            return x_transformed, y
+            x_combined = np.hstack(x_transformed)
+            return x_combined, y
 
     def mutual_information(self) -> float:
         """Return de joint mutual information."""
         return self._base_sampler.mutual_information()
+    
+    def get_metadata(self) -> dict:
+        """Return metadata dictionary of the distribution."""
+        return self._base_sampler.get_metadata()
+        
