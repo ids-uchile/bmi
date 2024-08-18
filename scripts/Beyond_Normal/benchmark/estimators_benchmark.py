@@ -96,7 +96,9 @@ def compare_EMI(X: np.ndarray,
     # Create DataFrame
     df = pd.DataFrame(data_flat, columns=['Estimator', 'Dimension 1', 'Dimension 2', 'Dimension 3', 'Dimension 4', 'Dimension 5'])
     # Add the ground truth as the first row in the DataFrame
-    df.loc[0] = ["Ground truth", ground_truth[0], ground_truth[1], ground_truth[2], ground_truth[3], ground_truth[4]]
+    ground_truth_df = pd.DataFrame([["Ground truth", ground_truth[0], ground_truth[1], ground_truth[2], ground_truth[3], ground_truth[4]]], 
+                               columns=df.columns)
+    df = pd.concat([ground_truth_df, df], ignore_index=True)
     df_values = df.set_index('Estimator')
     
     fig, axes = plt.subplots(1, len(df_values.columns), figsize=(18, 6), sharey=True)
