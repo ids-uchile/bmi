@@ -112,7 +112,7 @@ def plot_spiral(
     savedata: Optional[bool] = False,
     ) -> None:
 
-    """"""
+    """Plot the Spiral transformation in a 2D figure."""
 
     # Create a new figure and axes
     fig: plt.Figure
@@ -161,21 +161,16 @@ def plot_swissroll(
     """
     Plot the Swiss roll in 3D.
 
-    Parameters
-    ----------
-    distribution : Task
-        An object representing the distribution to apply the transformation.
-    scenario : Dict[str, np.ndarray]
-        A dictionary containing scenario data.
-    x_swiss : np.ndarray
-        An array containing the Swiss roll transformed coordinates.
-    y_swiss : np.ndarray
-        An array containing the color values for each point in the Swiss roll.
-    x_sample : np.ndarray
-        An array containing the original sample points.
-    dim : int, optional (default=0)
-        The dimension along which to plot the Swiss roll.
-        
+    Args:
+        distribution (Task): An object representing the distribution to apply the transformation.
+        scenario (Dict[str, np.ndarray]): A dictionary containing scenario data.
+        x_swiss (np.ndarray): An array containing the Swiss roll transformed coordinates.
+        y_swiss (np.ndarray): An array containing the color values for each point in the Swiss roll.
+        x_sample (np.ndarray): An array containing the original sample points.
+        dim (int, optional): The dimension along which to plot the Swiss roll. Default is 0.
+        savefig (bool, optional): If True, saves the generated 3D plot as a PDF file. Default is False.
+        savedata (bool, optional): If True, saves the Swissroll coordinates and target values. Default is False. 
+            
     """
     # Create figure for the 3D plot
     fig_emb = plt.figure(figsize=(8, 6))
@@ -210,16 +205,13 @@ def plot_swissroll(
 def swissroll2d_batch(x: jnp.ndarray) -> jnp.ndarray:
     """
     Applies the Swiss roll transformation to a batch of input values with multiple dimensions.
+    
+    Args:
+        x (jnp.ndarray): An array representing numbers in the range [0, 1].
 
-    Parameters
-    ----------
-    x : jnp.ndarray 
-        An array representing numbers in the range [0, 1].
-
-    Returns
-    -------
-    jnp.ndarray
-        Transformed array after applying the Swiss roll transformation.
+    Returns:
+        jnp.ndarray: Transformed array after applying the Swiss roll transformation.
+        
     """
     def transform(element):
         # Calculate the parameter t for the Swiss roll transformation
@@ -246,15 +238,12 @@ def sample_scale(samples: np.ndarray) -> np.ndarray:
     """
     Scale samples to ensure they are within the range (0, 1).
 
-    Parameters
-    ----------
-    samples : np.ndarray
-        Input samples to be scaled.
+    Args:
+        samples (np.ndarray): Input samples to be scaled.
 
-    Returns
-    -------
-    np.ndarray
-        Processed samples scaled to be within the range (0, 1).
+    Returns:
+        np.ndarray: Processed samples scaled to be within the range (0, 1).
+        
     """
     epsilon = 1e-6 # Small value to avoid exact 0 or 1
     processed_samples = []
@@ -291,22 +280,15 @@ def update_cell_bounds(
     """
     Update the cell boundaries in the 2D space based on the new samples.
     
-    Parameters
-    ----------
-    samples : np.ndarray
-        A 2D array of new samples.
-    scenario :  Dict[str, np.ndarray]
-        The scenario dictionary containing 'cell_bound' to be updated.
+    Args:
+        samples (np.ndarray): A 2D array of new samples.
+        scenario (Dict[str, np.ndarray]): The scenario dictionary containing 'cell_bound' to be updated.
 
-    Returns
-    -------
-    np.ndarray
-        Array with new 'cell_bound'.
+    Returns: 
+        np.ndarray: Array with new 'cell_bound'.
 
-    Raises
-    ------
-    ValueError: 
-        If the samples array does not have a shape of (n_samples, 2).
+    Raises: 
+        ValueError: If the samples array does not have a shape of (n_samples, 2).
         
     """
     if samples.shape[1] != 2:

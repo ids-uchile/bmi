@@ -23,9 +23,9 @@ def compare_EMI(X: np.ndarray,
         X (np.ndarray): Input data with multiple dimensions.
         y (np.ndarray): Target data.
         ground_truth (np.ndarray): Ground truth values of mutual information for comparison.
-        add_noise (bool, optional): If you want to add noise to the target value True if not False (default is False).
-        title (bool, optional): If you want to add title True if not False (default is False).
-        savefig (bool, optional): If you want to save the figure True otherwise False (default is False).
+        add_noise (bool, optional): If you want to add noise to the target value True if not False. Default is False.
+        title (bool, optional): If you want to add title True if not False. Default is False.
+        savefig (bool, optional): If you want to save the figure True otherwise False. Default is False.
     """
     
     # Generate uniform random noise to be added to the target variable
@@ -139,8 +139,8 @@ def compare_joint_EMI(X: np.ndarray,
         X (np.ndarray): Input data with multiple dimensions.
         y (np.ndarray): Target data.
         ground_truth (np.ndarray): Ground truth values of mutual information for comparison.
-        title (bool, optional): If you want to add title True if not False (default is False).
-        savefig (bool, optional): If you want to save the figure True otherwise False (default is False).
+        title (bool, optional): If you want to add title True if not False. Default is False.
+        savefig (bool, optional): If you want to save the figure True otherwise False. Default is False.
     """
     
     # Generate uniform random noise to be added to the target variable

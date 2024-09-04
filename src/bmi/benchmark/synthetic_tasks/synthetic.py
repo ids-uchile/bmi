@@ -17,19 +17,14 @@ def task_synthetic(
     """
     Creates a Task object for a synthetic dataset generation task.
 
-     Parameters
-    ----------
-    cell_boundaries : np.ndarray
-        The boundaries of the cells for each dimension.
-    symbol_probabilities : np.ndarray
-        The probabilities of each symbol.
-    cell_probabilities : np.ndarray
-        The probabilities of each cell for each symbol.
+    Args:
+        cell_boundaries (np.ndarray): The boundaries of the cells for each dimension.
+        symbol_probabilities (np.ndarray): The probabilities of each symbol.
+        cell_probabilities (np.ndarray): The probabilities of each cell for each symbol.
 
-    Returns
-    -------
-    Task
-        A Task object representing the synthetic dataset generation task.
+    Returns:
+        Task: A Task object representing the synthetic dataset generation task.
+        
     """
     # Create a SyntheticSampler object with provided parameters
     sampler = SyntheticSampler(

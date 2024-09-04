@@ -17,17 +17,13 @@ def t_student_cdf(
     """
     Transform samples from a uniform distribution to a Student's t-distribution using the inverse CDF.
     
-    Parameters
-    ----------
-    samples : np.ndarray
-        Samples from a uniform distribution.
-    df : int
-        Degrees of freedom for the t-distribution.
+    Args:
+        samples (np.ndarray): Samples from a uniform distribution.
+        df (int): Degrees of freedom for the t-distribution.
 
-    Returns
-    -------
-    np.ndarray
-        Transformed samples following a Student's t-distribution.
+    Returns:
+        np.ndarray: Transformed samples following a Student's t-distribution.
+        
     """
     # Scale samples using sample_scale function
     samples = sample_scale(samples)

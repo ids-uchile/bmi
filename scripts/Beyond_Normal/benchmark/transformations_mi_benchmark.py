@@ -33,10 +33,10 @@ def bench_mi_transformations(title: bool = False,
     data by applying the KSG estimator.
     
     Args:
-        title (bool, optional): If you want to add title True if not False (default is False).
-        add_noise (bool, optional): If you want to add noise to the target value True if not False (default es False).
-        n_samples (int, optional): Number of samples of the data (default is 10_000).
-        savefig (bool, optional): If you want to save the figure True otherwise False (default is False).
+        title (bool, optional): If you want to add title True if not False. Default is False.
+        add_noise (bool, optional): If you want to add noise to the target value True if not False. Default es False.
+        n_samples (int, optional): Number of samples of the data. Default is 10_000.
+        savefig (bool, optional): If you want to save the figure True otherwise False. Default is False.
     """
     # Define a base probability array for the demonstration scenario.
     base_demo_probabilities: np.ndarray = np.array(
@@ -309,9 +309,9 @@ def bench_joint_mi_transformations(ground_truth: np.ndarray,
     
     Args:
         ground_truth (np.ndarray): Ground truth values of mutual information for comparison.
-        title (bool, optional): If you want to add title True if not False (default is False).
-        n_samples (int, optional): Number of samples of the data (default is 10_000).
-        savefig (bool, optional): If you want to save the figure True otherwise False (default is False).
+        title (bool, optional): If you want to add title True if not False. Default is False.
+        n_samples (int, optional): Number of samples of the data. Default is 10_000.
+        savefig (bool, optional): If you want to save the figure True otherwise False. Default is False.
     """
     # Define a base probability array for the demonstration scenario.
     base_demo_probabilities: np.ndarray = np.array(

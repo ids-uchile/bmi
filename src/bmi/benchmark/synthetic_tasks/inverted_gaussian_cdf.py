@@ -16,15 +16,11 @@ def gaussian_cdf(
     """
     Transform samples from a uniform distribution to a multivariate normal distribution using the inverse CDF.
     
-    Parameters
-    ----------
-    samples : np.ndarray
-        Samples from a uniform distribution.
+    Args:
+        samples (np.ndarray): Samples from a uniform distribution.
 
-    Returns
-    -------
-    np.ndarray
-        Transformed samples following a standard normal distribution.
+    Returns:
+        np.ndarray: Transformed samples following a standard normal distribution.
 
     """
     # Scale samples using sample_scale function

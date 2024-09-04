@@ -42,8 +42,8 @@ def dim_augmented(num_swiss: int,
     
     Args:
         num_swiss (int): The number of Swiss roll transformations to apply. Must be greater than zero.
-        n_samples (int, optional): The number of samples of the data (default is 10_000).
-        savedata (bool, optional): If True, the generated data will be saved to a file (default is False). 
+        n_samples (int, optional): The number of samples of the data. Default is 10_000.
+        savedata (bool, optional): If True, the generated data will be saved to a file. Default is False. 
         
     Returns:
         np.ndarray: The final reshaped and augmented Swiss roll data.
